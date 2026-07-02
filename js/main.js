@@ -51,3 +51,51 @@ counters.forEach(counter => {
     counterObserver.observe(counter);
 
 });
+
+/*====================================
+HERO PARALLAX
+====================================*/
+
+const hero = document.querySelector("#hero");
+const heroBg = document.querySelector(".hero-bg");
+
+let current = 0;
+let target = 0;
+
+window.addEventListener("scroll", () => {
+
+    const rect = hero.getBoundingClientRect();
+
+    if(rect.bottom > 0){
+
+        target = window.scrollY * 0.30;
+
+    }
+
+});
+
+/*==========================================
+BACK TO TOP
+==========================================*/
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>500){
+
+        backToTop.style.opacity="1";
+        backToTop.style.visibility="visible";
+        backToTop.style.transform="translateY(0)";
+
+    }
+
+    else{
+
+        backToTop.style.opacity="0";
+        backToTop.style.visibility="hidden";
+        backToTop.style.transform="translateY(20px)";
+
+    }
+
+});

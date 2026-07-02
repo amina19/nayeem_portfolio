@@ -62,6 +62,18 @@ width:280px;
 
 }
 
+.hero-backdrop{
+
+    inset:-6%;
+
+}
+
+.hero-backdrop__image{
+
+    filter:saturate(1.02) contrast(1.03) brightness(.78);
+
+}
+
 .hero-content{
 
     text-align:center;
@@ -102,6 +114,24 @@ width:280px;
 }
 
 @media(max-width:600px){
+
+#hero{
+
+    padding:150px 24px 90px;
+
+}
+
+.hero-backdrop{
+
+    inset:-10%;
+
+}
+
+.hero-backdrop__image{
+
+    background-position:center 35%;
+
+}
 
 .metrics-grid{
 

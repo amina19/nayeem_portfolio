@@ -1,4 +1,6 @@
 @keyframes float{to{transform:translate(40px,-20px) scale(1.2)}}
+
+
 /*==================================
 REVEAL ANIMATIONS
 ==================================*/
@@ -105,5 +107,446 @@ box-shadow:0 0 0 14px rgba(125,255,149,0);
 box-shadow:0 0 0 0 rgba(125,255,149,0);
 
 }
+
+}
+
+/*==================================================
+ANIMATIONS
+==================================================*/
+
+@keyframes blobFloat{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    25%{
+
+        transform:
+        translate(40px,-30px)
+        scale(1.08);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-30px,40px)
+        scale(.95);
+
+    }
+
+    75%{
+
+        transform:
+        translate(50px,20px)
+        scale(1.05);
+
+    }
+
+    100%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+}
+
+@keyframes heroGlow{
+
+    0%,100%{
+
+        transform:scale(1);
+        opacity:.45;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+        opacity:.75;
+
+    }
+
+}
+
+@keyframes scrollBounce{
+
+    0%,100%{
+
+        transform:
+        translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,12px);
+
+    }
+
+}
+
+@keyframes pulseDot{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(78,141,114,.55);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 12px rgba(78,141,114,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(78,141,114,0);
+
+    }
+
+}
+
+@keyframes partnerScroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+@keyframes shimmer{
+
+    from{
+
+        transform:translateX(-120%);
+
+    }
+
+    to{
+
+        transform:translateX(120%);
+
+    }
+
+}
+
+@keyframes floatPortrait{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+.hero-image{
+
+    animation:floatPortrait 8s ease-in-out infinite;
+
+}
+
+/*==================================================
+REVEAL
+==================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:
+    opacity .1s ease,
+    transform .9s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.delay-1{transition-delay:.1s;}
+.delay-2{transition-delay:.2s;}
+.delay-3{transition-delay:.3s;}
+.delay-4{transition-delay:.4s;}
+.delay-5{transition-delay:.5s;}
+.delay-6{transition-delay:.6s;}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+#hero,
+.about-container,
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-image{
+
+order:-1;
+
+}
+
+.metrics-grid,
+.projects-grid,
+.services-grid,
+.testimonials-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline-item{
+
+width:100%;
+
+left:0 !important;
+
+padding-left:80px;
+
+padding-right:0;
+
+}
+
+.timeline-line,
+.timeline-progress{
+
+left:30px;
+
+}
+
+.timeline-content::after{
+
+left:-58px !important;
+right:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#navbar{
+
+padding:0 24px;
+
+}
+
+#navbar ul{
+
+display:none;
+
+}
+
+.hero-content h1{
+
+font-size:54px;
+
+}
+
+.hero-content h2{
+
+font-size:24px;
+
+}
+
+.section-title h2{
+
+font-size:42px;
+
+}
+
+.metrics-grid,
+.projects-grid,
+.services-grid,
+.testimonials-grid,
+.about-highlights{
+
+grid-template-columns:1fr;
+
+}
+
+.process-timeline{
+
+flex-direction:column;
+
+}
+
+.process-line{
+
+width:2px;
+
+height:70px;
+
+margin:auto;
+
+}
+
+.footer-top{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+.contact-form{
+
+padding:30px;
+
+}
+
+.hero-image img{
+
+width:320px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+section{
+
+padding:90px 0;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.hero-content h1{
+
+font-size:44px;
+
+}
+
+.hero-content h2{
+
+font-size:20px;
+
+}
+
+.tagline{
+
+font-size:17px;
+
+}
+
+.metric-card,
+.service-card,
+.project-card,
+.testimonial-card{
+
+padding:30px 24px;
+
+}
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+width:14px;
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+border-radius:20px;
+
+background:
+linear-gradient(
+180deg,
+#F5D08A,
+#C9A96E,
+#A67C38,
+#4E8D72);
+
+border:3px solid #111;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:
+linear-gradient(
+180deg,
+#FFE6A7,
+#D7B36C,
+#B5893A,
+#5BAA86);
+
+}
+
+::selection{
+
+background:var(--gold);
+
+color:#111;
 
 }
