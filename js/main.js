@@ -99,3 +99,44 @@ window.addEventListener("scroll",()=>{
     }
 
 });
+
+const navabr = document.getElementById("navbar");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > window.innerHeight * .75){
+
+        navbar.style.opacity="1";
+        navbar.style.visibility="visible";
+        navbar.style.transform="translateX(-50%) translateY(0)";
+
+    }
+
+    else{
+
+        navbar.style.opacity="0";
+        navbar.style.visibility="hidden";
+        navbar.style.transform="translateX(-50%) translateY(-120px)";
+
+    }
+
+});
+
+
+const heroScroll = document.querySelector(".hero-scroll");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>120){
+
+        heroScroll.style.opacity="0";
+        heroScroll.style.transform="translateX(-50%) translateY(30px)";
+
+    }else{
+
+        heroScroll.style.opacity="1";
+        heroScroll.style.transform="translateX(-50%) translateY(0)";
+
+    }
+
+});

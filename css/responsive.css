@@ -175,3 +175,18 @@ width:280px;
 }
 
 }
+@media (max-width:768px){
+
+    .hero-scroll{
+
+        right:24px;
+
+        bottom:28px;
+
+        transform:scale(.85);
+
+        transform-origin:bottom right;
+
+    }
+
+}

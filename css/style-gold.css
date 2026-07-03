@@ -708,14 +708,6 @@ HERO
 
 }
 
-.hero-content{
-
-    position:relative;
-
-    z-index:5;
-
-}
-
 .intro{
 
     display:inline-block;
@@ -781,6 +773,8 @@ HERO
     color:rgba(247,245,242,.70);
 
     line-height:1.9;
+
+    font-weight:500;
 
 }
 
@@ -2381,54 +2375,59 @@ PARTNERS
 
     transform:scale(1.08);
 
-}
-/*==================================================
+}/*==========================
 CONTACT
-==================================================*/
+===========================*/
 
 #contact{
 
+    padding:180px 0;
+
     position:relative;
 
-    padding:160px 0;
+    overflow:hidden;
 
 }
 
-.contact-wrapper{
+.contact-grid{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 520px;
 
-    gap:70px;
+    gap:90px;
 
     align-items:center;
 
 }
 
-.contact-content h2{
+.contact-left h2{
 
-    font-size:clamp(2.8rem,5vw,4.5rem);
+    font-size:clamp(3rem,6vw,5.6rem);
 
-    color:var(--white);
+    line-height:.95;
 
-    margin:20px 0 30px;
+    margin:22px 0 30px;
 
-}
-
-.contact-content>p{
-
-    color:rgba(247,245,242,.72);
-
-    font-size:18px;
-
-    line-height:2;
-
-    margin-bottom:45px;
+    max-width:650px;
 
 }
 
-.contact-details{
+.contact-description{
+
+    max-width:560px;
+
+    color:#b7b7b7;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    margin-bottom:55px;
+
+}
+
+.contact-cards{
 
     display:flex;
 
@@ -2438,17 +2437,21 @@ CONTACT
 
 }
 
-.contact-item{
+.contact-card{
 
     display:flex;
 
     align-items:center;
 
-    gap:20px;
+    gap:24px;
 
-    padding:22px 24px;
+    padding:28px 30px;
 
-    border-radius:24px;
+    border-radius:26px;
+
+    text-decoration:none;
+
+    color:#fff;
 
     background:rgba(255,255,255,.05);
 
@@ -2456,23 +2459,63 @@ CONTACT
 
     backdrop-filter:blur(18px);
 
-    transition:var(--transition);
+    -webkit-backdrop-filter:blur(18px);
+
+    transition:.45s cubic-bezier(.22,.61,.36,1);
+
+    overflow:hidden;
+
+    position:relative;
 
 }
 
-.contact-item:hover{
+.contact-card::before{
 
-    transform:translateX(10px);
+    content:"";
 
-    border-color:rgba(201,169,110,.22);
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.08),
+    transparent);
+
+    transform:translateX(-100%);
+
+    transition:.7s;
+
+}
+
+.contact-card:hover::before{
+
+    transform:translateX(100%);
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(212,175,55,.35);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35),
+
+    0 0 35px rgba(212,175,55,.08);
 
 }
 
 .contact-icon{
 
-    width:64px;
+    width:72px;
 
-    height:64px;
+    height:72px;
+
+    border-radius:20px;
 
     display:flex;
 
@@ -2480,106 +2523,153 @@ CONTACT
 
     justify-content:center;
 
-    border-radius:18px;
-
-    font-size:24px;
+    font-size:1.4rem;
 
     color:var(--gold);
 
-    background:rgba(201,169,110,.10);
+    background:
 
-    border:1px solid rgba(201,169,110,.20);
+    linear-gradient(
 
-}
+    145deg,
 
-.contact-item h4{
+    rgba(212,175,55,.18),
 
-    color:var(--white);
+    rgba(255,255,255,.05));
 
-    margin-bottom:6px;
+    border:1px solid rgba(212,175,55,.2);
 
-}
-
-.contact-item p{
-
-    color:rgba(247,245,242,.65);
+    flex-shrink:0;
 
 }
 
-.contact-form{
+.contact-card span{
 
-    padding:45px;
+    display:block;
 
-    border-radius:32px;
+    color:#9d9d9d;
 
-    background:rgba(255,255,255,.05);
+    margin-bottom:8px;
 
-    border:1px solid rgba(255,255,255,.08);
+    font-size:.9rem;
 
-    backdrop-filter:blur(22px);
+    letter-spacing:.08em;
 
-    box-shadow:var(--shadow-md);
-
-}
-
-.input-group{
-
-    margin-bottom:24px;
+    text-transform:uppercase;
 
 }
 
-.input-group input,
-.input-group textarea{
+.contact-card strong{
 
-    width:100%;
+    font-size:1.2rem;
 
-    padding:18px 22px;
+    font-weight:500;
 
-    border-radius:18px;
-
-    border:1px solid rgba(255,255,255,.10);
-
-    background:rgba(255,255,255,.04);
-
-    color:var(--white);
-
-    font-size:16px;
-
-    outline:none;
-
-    transition:var(--transition);
+    color:#fff;
 
 }
 
-.input-group textarea{
+/* RIGHT */
 
-    resize:none;
+.contact-visual{
+
+    height:906px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.35),
+
+    rgba(0,0,0,.35)),
+
+    url("../assets/images/contact-bg.png") center/cover;
 
 }
 
-.input-group input::placeholder,
-.input-group textarea::placeholder{
+.contact-visual::after{
 
-    color:rgba(247,245,242,.45);
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+    circle at top,
+
+    rgba(212,175,55,.15),
+
+    transparent 70%);
 
 }
 
-.input-group input:focus,
-.input-group textarea:focus{
+.contact-glass{
 
-    border-color:var(--gold);
+    position:absolute;
 
-    background:rgba(255,255,255,.07);
+    left:40px;
 
-    box-shadow:0 0 0 4px rgba(201,169,110,.08);
+    right:40px;
+
+    bottom:40px;
+
+    padding:34px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
 
 }
 
-.contact-form .btn{
+.contact-glass p{
 
-    width:100%;
+    font-size:2rem;
 
-    justify-content:center;
+    line-height:1.45;
+
+    color:#fff;
+
+    font-family:var(--font-display);
+
+}
+
+@media(max-width:992px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-visual{
+
+height:500px;
+
+margin-top:60px;
+
+}
+
+.contact-left h2{
+
+font-size:3rem;
+
+}
 
 }
 
@@ -3024,7 +3114,7 @@ ANIMATIONS
 /*==========================================
 GLASS HERO CONTENT
 ==========================================*/
-
+/*
 .hero-content{
 
     position:relative;
@@ -3063,7 +3153,62 @@ GLASS HERO CONTENT
     height:auto;
 }
 
+*/
 
+.hero-content{
+
+    position:relative;
+
+    z-index:20;
+
+    width:min(580px,90vw);
+
+    padding:40px 50px;
+
+    border-radius:34px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    border:1px solid rgba(255,255,255,.22);
+
+    border-left:3px solid var(--gold-dark);
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.22),
+        inset 0 1px 1px rgba(255,255,255,.22);
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+
+    gap:0;
+
+    height:auto;
+    min-height:auto;
+
+    margin-top:-100px;
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+}
+
+.hero-content:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 45px 110px rgba(0,0,0,.28),
+        inset 0 1px 1px rgba(255,255,255,.25);
+
+}
 
 /* Glass Shine */
 
@@ -3225,6 +3370,228 @@ GLASS HERO CONTENT
         transform:
         translateX(60%)
         rotate(-12deg);
+
+    }
+
+}
+
+#navbar{
+
+    position:fixed;
+
+    top:25px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(-120px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+
+        transform .8s cubic-bezier(.22,1,.36,1),
+
+        opacity .6s ease,
+
+        visibility .6s;
+
+    z-index:9999;
+
+}
+
+/*==========================================
+LUXURY HERO SCROLL
+==========================================*/
+
+.hero-scroll{
+
+    position:absolute;
+
+    left:95%;
+
+    bottom:130px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    z-index:40;
+
+    pointer-events:none;
+
+    opacity:.95;
+
+    transition:
+
+        opacity .5s ease,
+
+        transform .5s ease;
+
+}
+
+/* Mouse */
+
+.scroll-mouse{
+
+    animation:mouseFloat 3.5s ease-in-out infinite;
+
+}
+
+.scroll-mouse svg{
+
+    width:34px;
+
+    height:56px;
+
+}
+
+.scroll-mouse rect{
+
+    fill:rgba(255,255,255,.03);
+
+    stroke:rgba(255,255,255,.75);
+
+    stroke-width:1.5;
+
+    filter:drop-shadow(0 0 14px rgba(255,255,255,.18));
+
+}
+
+.scroll-wheel{
+
+    fill:var(--gold-dark);
+
+    animation:wheelScroll 2.2s ease infinite;
+
+}
+
+/* Vertical Line */
+
+.scroll-line{
+
+    position:relative;
+
+    width:1px;
+
+    height:110px;
+
+    background:rgba(255,255,255,.12);
+
+    overflow:hidden;
+
+}
+
+.scroll-line-fill{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:0;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        rgba(255,255,255,.9),
+
+        var(--gold-dark)
+
+    );
+
+    animation:lineGrow 2.2s ease infinite;
+
+}
+
+@keyframes mouseFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes wheelScroll{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    75%{
+
+        transform:translateY(18px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(24px);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes lineGrow{
+
+    0%{
+
+        height:0;
+
+        opacity:0;
+
+    }
+
+    25%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        height:110px;
+
+    }
+
+    100%{
+
+        height:110px;
+
+        opacity:0;
 
     }
 

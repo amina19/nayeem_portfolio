@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Nayeemulla | Portfolio</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-gold.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -36,6 +37,7 @@
 <header id="hero">
 
     <!-- Animated Background -->
+     <!-- <div class="hero-bg"></div> -->
 
     <div class="background">
 
@@ -44,10 +46,17 @@
         <div class="blob blob3"></div>
 
     </div>
+<!-- 
+    <div class="hero-backdrop" aria-hidden="true">
+        <div class="hero-backdrop__image"></div>
+        <div class="hero-backdrop__overlay"></div>
+        <div class="hero-backdrop__grain"></div>
+    </div> -->
 
     <!-- LEFT CONTENT -->
 
     <div class="hero-content">
+        <div class="shine"></div>
 
             <p class="intro reveal delay-1">
                 Hello, I'm
@@ -61,28 +70,18 @@
                 Founder • Project Manager • Business Development Leader
             </h2>
 
+            <div class="divider reveal delay-3"></div>
+
             <p class="tagline reveal delay-4">
                 Transforming Ideas into Exceptional Spaces,
                 Scalable Businesses and High-Performing Teams.
             </p>
 
-            <div class="buttons reveal delay-5">
-
-                <a href="#projects" class="btn primary">
-                    View Projects
-                </a>
-
-                <a href="assets/resume.pdf" class="btn secondary">
-                    Download Resume
-                </a>
-
-            </div>
-
     </div>
 
     <!-- RIGHT IMAGE -->
 
-    <div class="hero-image reveal delay-6">
+    <!-- <div class="hero-image reveal delay-6">
 
         <div class="glass-photo">
 
@@ -92,11 +91,51 @@
 
         </div>
 
+    </div> -->
+<div class="hero-fade"></div>
+
+<!-- <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line">
+        <div class="scroll-dot"></div>
+    </div>
+</div> -->
+
+    <div class="hero-scroll">
+
+    <div class="scroll-mouse">
+
+        <svg viewBox="0 0 34 56">
+
+            <rect
+                x="3"
+                y="3"
+                width="28"
+                height="50"
+                rx="15"
+                ry="15"
+            />
+
+            <circle
+                class="scroll-wheel"
+                cx="17"
+                cy="16"
+                r="3"
+            />
+
+        </svg>
+
     </div>
 
-</header>
-<!-- KPI Section
+    <div class="scroll-line">
+        <span class="scroll-line-fill"></span>
+    </div>
 
+</div>
+
+</div>
+</header>
+<!--
 <section id="achievements">
 
     <div class="container">
@@ -144,7 +183,7 @@
 <!-- ========================================= -->
 <!-- PROFESSIONAL HIGHLIGHTS -->
 <!-- ========================================= -->
-
+<!---
 <section id="highlights">
 
     <div class="section-title reveal">
@@ -233,6 +272,121 @@
             <h4>Vendors</h4>
 
             <p>Trusted Network</p>
+
+        </div>
+
+    </div>
+
+</section>
+-->
+<!-- ========================================= -->
+<!-- ABOUT -->
+<!-- ========================================= -->
+
+<section id="about">
+
+    <div class="container about-container">
+
+        <!-- LEFT -->
+
+        <div class="about-image reveal">
+
+            <div class="image-wrapper">
+
+                <img src="assets/images/nayeem.png"
+                     alt="Mohammed Nayeemulla">
+
+            </div>
+
+            <div class="experience-card glass">
+
+                <h3>8+</h3>
+                <span>Years Experience</span>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="about-content reveal">
+
+            <span class="section-subtitle">
+                The Story Behind The Spaces
+            </span>
+
+            <h2>
+                Building Beautiful Spaces Through
+                Vision, Precision & Leadership.
+            </h2>
+
+            <p>
+
+                With over eight years of experience across
+                interior design, project execution, sales,
+                business development and entrepreneurship,
+                I have built a career around creating
+                exceptional experiences for clients.
+
+            </p>
+
+            <p>
+
+                From managing luxury residential interiors
+                to launching innovative technology ventures,
+                every project I undertake is driven by
+                quality, transparency and attention to detail.
+
+            </p>
+
+            <div class="about-highlights">
+
+                <div class="highlight-card glass">
+
+                    <h3>40+</h3>
+                    <span>Projects Delivered</span>
+
+                </div>
+
+                <div class="highlight-card glass">
+
+                    <h3>2</h3>
+                    <span>Businesses Founded</span>
+
+                </div>
+
+                <div class="highlight-card glass">
+
+                    <h3>35%</h3>
+                    <span>Revenue Growth</span>
+
+                </div>
+
+                <div class="highlight-card glass">
+
+                    <h3>20+</h3>
+                    <span>Trusted Vendors</span>
+
+                </div>
+
+            </div>
+
+            <div class="about-buttons">
+
+                <a href="#projects" class="btn primary">
+
+                    View Projects
+
+                </a>
+
+                <a href="assets/resume.pdf"
+                   class="btn secondary">
+
+                    Download Resume
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -398,9 +552,694 @@
 
 </section>
 
+<!-- ========================================= -->
+<!-- FEATURED PROJECTS -->
+<!-- ========================================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title reveal">
+
+            <span>Featured Projects</span>
+
+            <h2>
+                Selected Work
+            </h2>
+
+            <p>
+                A collection of residential and commercial
+                interiors crafted with attention to detail,
+                functionality and timeless aesthetics.
+            </p>
+
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-1.jpg"
+                         alt="Luxury Villa">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Residential Interior
+                    </span>
+
+                    <h3>Luxury Villa</h3>
+
+                    <p>
+                        A contemporary residence combining
+                        elegant materials, warm lighting
+                        and bespoke furnishings.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Bangalore</span>
+
+                        <span>2024</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Project 2 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-2.jpg"
+                         alt="Modern Apartment">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Apartment Interior
+                    </span>
+
+                    <h3>Modern Urban Home</h3>
+
+                    <p>
+                        Minimal interiors with luxurious
+                        textures and functional layouts.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Bangalore</span>
+
+                        <span>2023</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Project 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-3.jpg"
+                         alt="Office Interior">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Commercial Interior
+                    </span>
+
+                    <h3>Corporate Workspace</h3>
+
+                    <p>
+                        Designed to encourage productivity,
+                        collaboration and brand identity.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Bangalore</span>
+
+                        <span>2023</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Project 4 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-4.jpg"
+                         alt="Luxury Bedroom">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Residential Interior
+                    </span>
+
+                    <h3>Luxury Bedroom Suite</h3>
+
+                    <p>
+                        Warm lighting, premium materials
+                        and elegant detailing throughout.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Mysore</span>
+
+                        <span>2022</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Project 5 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-5.jpg"
+                         alt="Dining Space">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Luxury Dining
+                    </span>
+
+                    <h3>Contemporary Dining</h3>
+
+                    <p>
+                        Sophisticated interiors blending
+                        functionality with timeless design.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Bangalore</span>
+
+                        <span>2022</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Project 6 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img src="assets/projects/project-6.jpg"
+                         alt="Kitchen">
+
+                    <div class="project-overlay">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Modular Kitchen
+                    </span>
+
+                    <h3>Premium Kitchen Design</h3>
+
+                    <p>
+                        Modern functionality combined
+                        with luxurious finishes and storage.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <span>Bangalore</span>
+
+                        <span>2021</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- SERVICES -->
+<!-- ========================================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title reveal">
+
+            <span>Services</span>
+
+            <h2>What I Can Help You With</h2>
+
+            <p>
+                Delivering complete interior solutions from
+                concept development to flawless execution.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card reveal">
+
+                <div class="service-number">01</div>
+
+                <h3>Residential Interiors</h3>
+
+                <p>
+                    Complete home interiors tailored to your
+                    lifestyle with premium finishes and
+                    thoughtful space planning.
+                </p>
+
+            </div>
+
+            <div class="service-card reveal">
+
+                <div class="service-number">02</div>
+
+                <h3>Commercial Interiors</h3>
+
+                <p>
+                    Functional office and commercial spaces
+                    designed to enhance productivity and
+                    strengthen your brand identity.
+                </p>
+
+            </div>
+
+            <div class="service-card reveal">
+
+                <div class="service-number">03</div>
+
+                <h3>Turnkey Execution</h3>
+
+                <p>
+                    End-to-end project delivery including
+                    planning, procurement, execution and
+                    final handover.
+                </p>
+
+            </div>
+
+            <div class="service-card reveal">
+
+                <div class="service-number">04</div>
+
+                <h3>Project Management</h3>
+
+                <p>
+                    Coordinating contractors, vendors,
+                    budgets and timelines to ensure smooth
+                    project completion.
+                </p>
+
+            </div>
+
+            <div class="service-card reveal">
+
+                <div class="service-number">05</div>
+
+                <h3>Space Planning</h3>
+
+                <p>
+                    Smart layouts that maximize comfort,
+                    aesthetics and functionality for every
+                    square foot.
+                </p>
+
+            </div>
+
+            <div class="service-card reveal">
+
+                <div class="service-number">06</div>
+
+                <h3>Custom Furniture</h3>
+
+                <p>
+                    Bespoke furniture and storage solutions
+                    crafted to complement your interior
+                    perfectly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- PROCESS -->
+<!-- ========================================= -->
+
+<section id="process">
+
+    <div class="container">
+
+        <div class="section-title reveal">
+
+            <span>My Process</span>
+
+            <h2>How Every Project Comes To Life</h2>
+
+            <p>
+                A structured workflow that ensures transparency,
+                quality and timely delivery from concept to completion.
+            </p>
+
+        </div>
+
+        <div class="process-timeline">
+
+            <div class="process-step reveal">
+
+                <div class="process-circle">
+                    01
+                </div>
+
+                <h3>Consultation</h3>
+
+                <p>
+                    Understanding your vision, lifestyle,
+                    requirements and project goals.
+                </p>
+
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step reveal">
+
+                <div class="process-circle">
+                    02
+                </div>
+
+                <h3>Design & Planning</h3>
+
+                <p>
+                    Space planning, material selection,
+                    budgeting and execution strategy.
+                </p>
+
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step reveal">
+
+                <div class="process-circle">
+                    03
+                </div>
+
+                <h3>Execution</h3>
+
+                <p>
+                    Coordinating vendors, supervising
+                    site work and maintaining quality.
+                </p>
+
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step reveal">
+
+                <div class="process-circle">
+                    04
+                </div>
+
+                <h3>Quality Check</h3>
+
+                <p>
+                    Every detail is inspected to ensure
+                    flawless workmanship and finishing.
+                </p>
+
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-step reveal">
+
+                <div class="process-circle">
+                    05
+                </div>
+
+                <h3>Project Handover</h3>
+
+                <p>
+                    Final walkthrough and delivery of
+                    your completed dream space.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- ========================================= -->
+<!-- CONTACT -->
+<!-- ========================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <!-- LEFT -->
+
+            <div class="contact-left reveal">
+
+                <span class="section-subtitle">
+                    Get In Touch
+                </span>
+
+                <h2>
+                    Let's Build <br>
+                    Something Exceptional.
+                </h2>
+
+                <p class="contact-description">
+
+                    Whether you're designing a timeless residence,
+                    transforming a commercial space or looking for
+                    a trusted project management partner,
+                    I'd love to hear your vision.
+
+                </p>
+
+                <div class="contact-cards">
+
+                    <!-- Location -->
+
+                    <a href="#" class="contact-card">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <strong>
+                                Bangalore, Karnataka
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                    <!-- Phone -->
+
+                    <a href="tel:+918618300058" class="contact-card">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Phone</span>
+
+                            <strong>
+                                +91 86183 00058
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                    <!-- Email -->
+
+                    <a href="mailto:mdnayeem994@gmail.com" class="contact-card">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <strong>
+
+                                mdnayeem994@gmail.com
+
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="contact-visual reveal">
+
+                <div class="contact-glass">
+
+                    <p>
+
+                        "Great spaces aren't designed.
+                        They're carefully orchestrated."
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer id="footer">
+
+    <p>
+
+        © 2026 Mohammed Nayeemulla. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!-- Floating Back To Top -->
+
+<a href="#hero" id="backToTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</a>
+<!-- ========================================= -->
+<!-- SCRIPTS -->
+<!-- ========================================= -->
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- Lenis Smooth Scroll -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<!-- Vanilla Tilt -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+<!-- Existing JS -->
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/timeline.js"></script>
+
 </body>
 
 </html>
