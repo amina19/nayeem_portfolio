@@ -740,29 +740,108 @@ HERO
 
     font-size:24px;
 
-    font-weight:400;
+    font-weight:500;
 
     color:var(--gold);
 
-    line-height:1.7;
+    line-height:1.45;
 
-    margin-bottom:10px;
+    margin:15px 0 12px;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: fit-content;
+
+    z-index: 2;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.30),
+    0 8px 28px rgba(0,0,0,.20);
+
+    color: rgba(216, 185, 113, 0.82);
+
+}
+
+
+.hero-content h2::before{
+
+    content: "";
+
+    position: absolute;
+
+    inset: -18px -28px;
+
+    z-index: -1;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(20,18,16,.42) 0%,
+            rgba(20,18,16,.26) 55%,
+            transparent 100%
+        );
+
+    filter: blur(18px);
+
+    pointer-events: none;
 
 }
 
 .divider{
 
-    width:70px;
+    width: clamp(80px, 18vw, 140px);
 
-    height:3px;
-
-    background:linear-gradient(90deg, var(--gold), var(--gold-light), var(--emerald));
-
-    border-radius:20px;
+    height: 2px;
 
     margin-bottom:22px;
 
+    border-radius: 999px;
+
+    background:linear-gradient(90deg, var(--gold), var(--gold-light), var(--emerald));
+
+    position: relative;
+
+    overflow: hidden;
+
 }
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transform:translateX(-150%);
+
+    animation:dividerShine 4s ease-in-out infinite;
+
+}
+
+@keyframes dividerShine{
+
+    0%,70%{
+        transform:translateX(-150%);
+    }
+
+    100%{
+        transform:translateX(180%);
+    }
+
+}
+
 
 .tagline{
 
@@ -3194,9 +3273,30 @@ GLASS HERO CONTENT
 
     margin-top:-100px;
 
-    transition:
+    /* transition:
         transform .5s ease,
-        box-shadow .5s ease;
+        box-shadow .5s ease; */
+
+
+    opacity:0;
+
+    transform:translateY(40px) scale(.96);
+
+    animation:heroCard 1s cubic-bezier(.22,.61,.36,1) forwards;
+
+    animation-delay:.2s;
+
+}
+
+@keyframes heroCard{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
 
 }
 
@@ -3427,7 +3527,7 @@ LUXURY HERO SCROLL
 
     pointer-events:none;
 
-    opacity:.95;
+    opacity:1;
 
     transition:
 
