@@ -3696,3 +3696,227 @@ LUXURY HERO SCROLL
     }
 
 }
+
+.achievement-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+.achievement-list span{
+
+    padding:12px 18px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:.82rem;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+}
+.achievement-list span:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(201,169,110,.25);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*------------------------------------
+ACHIEVEMENTS
+------------------------------------*/
+
+.timeline-achievements{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    justify-content:flex-start;
+
+}
+
+.timeline-item.right .timeline-achievements{
+
+    justify-content:flex-end;
+
+}
+
+.achievement-pill{
+
+    padding:18px 26px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    white-space:nowrap;
+
+}
+
+.achievement-pill:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(201,169,110,.3);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/*------------------------------------
+REVEAL
+------------------------------------*/
+
+.timeline-item{
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+.timeline-item.left{
+
+    transform:translateX(-70px);
+
+}
+
+.timeline-item.right{
+
+    transform:translateX(70px);
+
+}
+
+.timeline-item.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*------------------------------------
+TABLET
+------------------------------------*/
+
+@media(max-width:992px){
+
+.timeline-item{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    margin-bottom:100px;
+
+}
+
+.timeline-line,
+.timeline-progress{
+
+    left:28px;
+
+}
+
+.timeline-node{
+
+    display:none;
+
+}
+
+.timeline-achievements{
+
+    justify-content:flex-start!important;
+
+}
+
+.timeline-item.right{
+
+    direction:ltr;
+
+}
+
+.timeline-card h3{
+
+    font-size:34px;
+
+}
+
+}
+
+/*------------------------------------
+MOBILE
+------------------------------------*/
+
+@media(max-width:768px){
+
+.timeline-card{
+
+    padding:28px;
+
+}
+
+.timeline-top{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.timeline-card h3{
+
+    font-size:30px;
+
+}
+
+.timeline-card p{
+
+    font-size:16px;
+
+}
+
+.timeline-achievements{
+
+    gap:12px;
+
+}
+
+.achievement-pill{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+}
+

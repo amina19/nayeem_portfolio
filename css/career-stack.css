@@ -1,0 +1,635 @@
+/*======================================
+CAREER DECK
+======================================*/
+
+.career-deck{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    height:430px;
+
+    margin-top:90px;
+
+    overflow:visible;
+
+    padding-left:30px;
+
+}   
+
+/*======================================
+STACK
+======================================*/
+
+.deck-card{
+
+    position:relative;
+
+    flex:0 0 400px;
+
+    width:400px;
+    height:320px;
+
+    margin-left:-305px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    transform .55s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    border-color .45s ease,
+    opacity .35s ease;
+
+}
+
+/*======================================
+VISIBLE STRIP
+======================================*/
+
+.deck-card:not(.active){
+
+    opacity:.92;
+
+}
+
+
+/*======================================
+DESKTOP SPACING
+======================================*/
+
+@media (min-width:1200px){
+
+    .career-deck{
+
+        justify-content:flex-start;
+
+        padding-left:30px;
+
+        padding-right:30px;
+
+    }
+
+}
+
+
+/*======================================
+TABLET
+======================================*/
+
+@media(max-width:1100px){
+
+    .career-deck{
+
+        overflow-x:auto;
+
+        gap:28px;
+
+        padding-bottom:15px;
+
+        height:auto;
+
+        scroll-snap-type:x mandatory;
+
+    }
+
+    .career-deck::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .deck-card{
+
+        margin-left:0;
+
+        flex:0 0 360px;
+
+        scroll-snap-align:start;
+
+    }
+
+}
+
+
+/*======================================
+MOBILE
+======================================*/
+
+@media(max-width:768px){
+
+    .career-deck{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:24px;
+
+        overflow:visible;
+
+        height:auto;
+
+    }
+
+    .deck-card{
+
+        width:100%;
+
+        max-width:420px;
+
+        margin:0 auto;
+
+        flex:none;
+
+    }
+
+}
+
+/*step 2*/
+
+/*======================================
+CARD DESIGN
+======================================*/
+
+.deck-card{
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(210,174,97,.12),
+        transparent 45%),
+
+        linear-gradient(145deg,
+        rgba(255,255,255,.045),
+        rgba(255,255,255,.02));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.04),
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+/*======================================
+TOP AREA
+======================================*/
+
+.deck-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:28px;
+
+}
+
+
+/*======================================
+LOGO
+======================================*/
+
+.deck-logo{
+
+    width:74px;
+
+    height:74px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    flex-shrink:0;
+
+}
+
+
+.deck-logo img{
+
+    width:52px;
+
+    height:52px;
+
+    object-fit:contain;
+
+}
+
+
+/*======================================
+YEAR PILL
+======================================*/
+
+.deck-period{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(90deg,
+        rgba(210,174,97,.95),
+        rgba(120,190,135,.9));
+
+    color:#111;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    box-shadow:
+
+        0 8px 25px rgba(210,174,97,.18);
+
+}
+
+
+.deck-period span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+/* Green Dot */
+
+.deck-period i{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#45ff9a;
+
+    box-shadow:
+
+        0 0 10px #45ff9a,
+
+        0 0 20px rgba(69,255,154,.45);
+
+}
+
+
+/*======================================
+CONTENT
+======================================*/
+
+.deck-content{
+
+    padding:
+
+        0 28px 28px;
+
+}
+
+
+/*======================================
+COMPANY
+======================================*/
+
+.deck-company{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    color:var(--primary-color);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+
+/*======================================
+ROLE
+======================================*/
+
+.deck-content h3{
+
+    margin:0 0 20px;
+
+    font-size:2rem;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.deck-content p{
+
+    color:rgba(255,255,255,.72);
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+    margin:0;
+
+}
+
+/*part 3*/
+
+/*======================================
+ACHIEVEMENT TAGS
+======================================*/
+
+.deck-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:26px;
+
+}
+
+
+/*======================================
+TAG
+======================================*/
+
+.deck-tags span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:rgba(255,255,255,.88);
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+
+    transition:all .35s ease;
+
+}
+
+
+/* Gold Dot */
+
+.deck-tags span::before{
+
+    content:"";
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--primary-color);
+
+    box-shadow:0 0 10px rgba(201,169,110,.55);
+
+}
+
+
+/*======================================
+DEFAULT STATE
+======================================*/
+
+.deck-tags{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:
+
+        opacity .45s ease,
+
+        transform .45s ease;
+
+}
+
+
+/*======================================
+SHOW ON ACTIVE
+======================================*/
+
+.deck-card:hover .deck-tags,
+
+.deck-card.active .deck-tags{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*======================================
+STAGGER
+======================================*/
+
+.deck-tags span{
+
+    opacity:0;
+
+    transform:translateY(10px);
+
+}
+
+.deck-card:hover .deck-tags span,
+
+.deck-card.active .deck-tags span{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.deck-tags span:nth-child(1){
+
+    transition-delay:.05s;
+
+}
+
+.deck-tags span:nth-child(2){
+
+    transition-delay:.12s;
+
+}
+
+.deck-tags span:nth-child(3){
+
+    transition-delay:.19s;
+
+}
+
+
+/*======================================
+TAG HOVER
+======================================*/
+
+.deck-tags span:hover{
+
+    background:rgba(201,169,110,.10);
+
+    border-color:rgba(201,169,110,.28);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 10px 20px rgba(0,0,0,.18),
+
+        0 0 20px rgba(201,169,110,.08);
+
+}
+
+/*part 4*/
+
+/*======================================
+STACK INTERACTION
+======================================*/
+
+.career-deck:hover .deck-card{
+
+    filter:brightness(.72);
+
+}
+
+.deck-card:hover{
+
+    filter:brightness(1);
+
+    transform:
+        translateY(-12px);
+
+    z-index:100;
+
+}
+
+
+/*======================================
+SPREAD CARDS
+======================================*/
+
+.deck-card:hover ~ .deck-card{
+
+    transform:translateX(120px);
+
+}
+
+
+/*======================================
+ACTIVE SHADOW
+======================================*/
+
+.deck-card:hover{
+
+    border-color:rgba(201,169,110,.25);
+
+    box-shadow:
+
+        0 35px 90px rgba(0,0,0,.45),
+
+        0 0 40px rgba(201,169,110,.08);
+
+}
+
+
+/*======================================
+NON ACTIVE
+======================================*/
+
+.career-deck:hover .deck-card:not(:hover){
+
+    opacity:.9;
+
+}
+
+
+/*======================================
+SMOOTH EASING
+======================================*/
+
+.deck-card{
+
+    transition:
+
+        transform .6s cubic-bezier(.22,1,.36,1),
+
+        box-shadow .35s,
+
+        border-color .35s,
+
+        filter .35s,
+
+        opacity .35s;
+
+}
